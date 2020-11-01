@@ -31,7 +31,7 @@ function recip() {
     timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒'
 
 }
-
+recip()
 setInterval(function () {
     recip()
-}, 100)
+}, 500)
