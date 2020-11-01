@@ -32,8 +32,6 @@ function recip() {
 
 }
 
-recip()
-
 setInterval(function () {
     recip()
-}, 1000)
+}, 100)
