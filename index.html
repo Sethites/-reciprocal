@@ -5,26 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>倒數計時</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/index.css"> 
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <header>
-        <h3>退伍倒數計時</h3>
-    </header>
-    <section>
-        <div>
-            <span id="time">處理中</span>
-        </div>
-        <div>
-            <span id="holiday"></span>
-        </div>
-    </section>
-    <footer></footer>
+    <div class="container">
+        <!-- #region nav -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand">118梯退伍倒數</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="reloadbtn">重填折抵<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- #endregion -->
+        <section>
+            <div class="row">
+                <div class="col-12">
+                    <div id="time">
+                        處理中
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <span id="holiday"></span>
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+        <footer></footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/discount.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/holiday.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
