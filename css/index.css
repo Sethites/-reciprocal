@@ -35,3 +35,6 @@ nav {
 .tip {
     overflow: hidden;
 }
+#hide {
+    visibility: hidden;
+}

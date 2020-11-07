@@ -49,33 +49,47 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-12">
                     <div>
-                        <button type="button" class="btn btn-warning">複製網址</button>
+                        <button id='cbtn' type="button" class="btn btn-warning" data-clipboard-text="66">複製網址</button>
                         <span id="tip">（下次就不用再填天數了。）</span>
                     </div>
                 </div>
             </div>
-                <div class="col-6">
-                    <div>
-                        <span id="holiday"></span>
-                    </div>
+            <div class="col-6">
+                <div>
+                    <span id="holiday"></span>
                 </div>
-            
+            </div>
 
-            
         </section>
         <footer></footer>
     </div>
+    <script src="./clipboard.js-master/dist/clipboard.min.js"></script>
+
+    <script>
+        var clipboard = new ClipboardJS('.btn');
+    
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+    
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+        </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/discount.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/holiday.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/copybtn.js"></script>
 </body>
 
 </html>
