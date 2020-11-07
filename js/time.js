@@ -1,30 +1,78 @@
+var str = location.href
+
+var nstr = Number(str.slice(-2))
+console.log(nstr);
+var nd = new Date()
+switch (nstr) {
+    case 00:
+        nd.setFullYear(2021)
+        nd.setMonth(0, 4)
+        break
+
+    case 01:
+    case 02:
+    case 03:
+    case 04:
+        nd.setMonth(11, 31)
+        break
+
+    case 05:
+        nd.setMonth(11, 30)
+        break
+
+    case 06:
+        nd.setMonth(11, 29)
+        break
+
+    case 07:
+        nd.setMonth(11, 28)
+        break
+
+    case 08:
+    case 09:
+    case 10:
+        nd.setMonth(11, 25)
+        break
+
+    case 11:
+        nd.setMonth(11, 24)
+        break
+
+    case 12:
+        nd.setMonth(11, 23)
+        break
+
+    case 13:
+        nd.setMonth(11, 22)
+        break
+
+    case 14:
+        nd.setMonth(11, 21)
+        break
+
+    case 15:
+        nd.setMonth(11, 18)
+        break
+}
+nd.setHours(18)
+nd.setMinutes(0)
+nd.setSeconds(0)
+
 function recip() {
     var d = new Date()
-    // console.log(d)
-
-    var nd = new Date()
-    nd.setMonth(11, 26)
-    nd.setHours(8)
-    nd.setMinutes(0)
-    nd.setSeconds(0)
-    // console.log(nd);
 
     var t = nd - d
     var tsec = Math.floor(t / 1000)
     var sec = Math.floor(tsec % 60)
-    console.log(sec);
 
     var tmin = Math.floor(tsec / 60)
     var min = Math.floor(tmin % 60)
-    console.log(min);
 
     var thour = Math.floor(tmin / 60)
     var hour = Math.floor(thour % 24)
-    console.log(hour);
 
     var tday = Math.floor(thour / 24)
 
-    console.log(tday);
 
     var timedom = document.getElementById('time')
 
