@@ -15,3 +15,7 @@ if(i==6) {
 var hdom = document.getElementById('holiday')
 
 hdom.innerHTML=ht
+
+var imgs = document.getElementById('imgs')
+
+imgs.setAttribute('src','./img/'+i+'.jpg')

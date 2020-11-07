@@ -38,3 +38,10 @@ nav {
 #hide {
     visibility: hidden;
 }
+#holiday {
+    text-align: center;
+}
+#imgs {
+    width: 80%;
+    margin: 0 10%;
+}
