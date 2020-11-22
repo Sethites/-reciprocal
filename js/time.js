@@ -120,7 +120,12 @@ function recip() {
         return varName
     }
 
+    var hdom = document.getElementById('holiday')
 
+    if(tsec<=0) {
+        hdom.innerHTML='退伍了!'
+    }
+    
 
     var timedom = document.getElementById('time')
     timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒' + '（在營' + count + '天）'
