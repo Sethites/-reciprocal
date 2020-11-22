@@ -81,22 +81,28 @@ function countDate(ndTime) {
 
     var count = 0
 
-    for (var i = 0; i < tday+2; i++) {
+    console.log(tday);
+    for (var i = 0; i < tday + 2; i++) {
         if (wd % 7 == 0 || wd % 7 == 1) {
             count += 0
-        }else{
+        } else {
             count += 1
         }
-        wd+=1
+        wd += 1
     }
 
+    if (tday <= 0 && thour <= 0) {
+        count = 0
+    }
     return count
 }
+
 function recip() {
     var d = new Date()
 
     var t = nd - d
     var tsec = Math.floor(t / 1000)
+    tsec = setZero(tsec)
     var sec = Math.floor(tsec % 60)
 
     var tmin = Math.floor(tsec / 60)
@@ -107,8 +113,17 @@ function recip() {
 
     var tday = Math.floor(thour / 24)
 
+    function setZero(varName) {
+        if (varName <= 0) {
+            varName = 0
+        }
+        return varName
+    }
+
+
+
     var timedom = document.getElementById('time')
-    timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒'+'（在營'+count+'天）'
+    timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒' + '（在營' + count + '天）'
 }
 
 
