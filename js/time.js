@@ -54,10 +54,44 @@ switch (nstr) {
         nd.setMonth(11, 18)
         break
 }
+nd.setHours(0)
+var count = countDate(nd)
 nd.setHours(18)
 nd.setMinutes(0)
 nd.setSeconds(0)
 
+function countDate(ndTime) {
+    var d = new Date()
+
+    var t = ndTime - d
+    var tsec = Math.floor(t / 1000)
+    var sec = Math.floor(tsec % 60)
+
+    var tmin = Math.floor(tsec / 60)
+    var min = Math.floor(tmin % 60)
+
+    var thour = Math.floor(tmin / 60)
+    var hour = Math.floor(thour % 24)
+
+    var tday = Math.floor(thour / 24)
+
+    var d1 = new Date()
+
+    var wd = d1.getDate()
+
+    var count = 0
+
+    for (var i = 0; i < tday+2; i++) {
+        if (wd % 7 == 0 || wd % 7 == 1) {
+            count += 0
+        }else{
+            count += 1
+        }
+        wd+=1
+    }
+
+    return count
+}
 function recip() {
     var d = new Date()
 
@@ -73,11 +107,8 @@ function recip() {
 
     var tday = Math.floor(thour / 24)
 
-
     var timedom = document.getElementById('time')
-
-    timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒'
-
+    timedom.innerHTML = tday + '天' + hour + '時' + min + '分' + sec + '秒'+'（在營'+count+'天）'
 }
 
 
