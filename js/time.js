@@ -91,7 +91,7 @@ function countDate(ndTime) {
         wd += 1
     }
 
-    if (tday <= 0 && thour <= 0) {
+    if (tday+2 <= 0 && thour <= 0) {
         count = 0
     }
     return count
